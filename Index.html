@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PORTAL WEBP TERBARU BY FIZZ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{
+width:100%;
+height:100%;
+font-family:'Orbitron',sans-serif;
+overflow-x:hidden;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+position:relative;
+background:#000;
+}
+
+.bg{
+position:fixed;
+inset:0;
+z-index:-5;
+background:
+radial-gradient(circle at 15% 20%, rgba(255,196,0,.25), transparent 35%),
+radial-gradient(circle at 85% 80%, rgba(255,196,0,.20), transparent 35%),
+linear-gradient(135deg,#000000,#0f0f0f,#050505,#000000);
+}
+
+.stars{
+position:fixed;
+inset:0;
+z-index:-4;
+background-image:radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px);
+background-size:35px 35px;
+}
+
+.glow{
+position:fixed;
+width:1000px;
+height:1000px;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+border-radius:50%;
+background:radial-gradient(circle,rgba(255,196,0,.15),transparent 70%);
+filter:blur(120px);
+z-index:-3;
+}
+
+.panel{
+width:100%;
+max-width:520px;
+margin:auto;
+padding:35px;
+border-radius:35px;
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(25px);
+border:1px solid rgba(255,196,0,.18);
+box-shadow:0 0 25px rgba(255,196,0,.10),0 0 80px rgba(255,196,0,.08);
+animation:floatPanel 6s ease-in-out infinite;
+}
+
+/* Class untuk menyembunyikan menu */
+.hidden {
+display: none !important;
+}
+
+.logo{text-align:center;margin-bottom:30px;}
+
+.logo h1{
+font-size:42px;
+color:#ffc400;
+letter-spacing:4px;
+text-shadow:0 0 10px rgba(255,196,0,.8),0 0 30px rgba(255,196,0,.5);
+}
+
+.logo p{margin-top:8px;font-size:13px;color:#bdbdbd;}
+
+label{
+display:block;
+margin-bottom:12px;
+font-size:17px;
+color:#ffd54f;
+text-align:center;
+}
+
+form{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+select{
+width:100%;
+padding:18px;
+border-radius:20px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,196,0,.20);
+color:white;
+font-size:14px;
+outline:none;
+margin-bottom:20px;
+}
+
+button{
+width:100%;
+padding:18px;
+border:none;
+cursor:pointer;
+font-family:'Orbitron',sans-serif;
+font-size:16px;
+font-weight:700;
+border-radius:20px;
+background:linear-gradient(135deg,#ffd700,#ffb300);
+color:#111;
+transition:.35s;
+}
+
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(255,215,0,.7),0 0 50px rgba(255,215,0,.3);
+}
+
+.info-cards{
+margin-top:25px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.info-card{
+padding:20px;
+border-radius:22px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,196,0,.15);
+cursor:pointer;
+transition:.3s;
+}
+
+.info-card:hover{
+transform:translateY(-5px);
+border-color:#ffc400;
+box-shadow:0 0 25px rgba(255,196,0,.18);
+}
+
+.info-card h3{color:#ffc400;margin-bottom:8px;font-size:18px;}
+.info-card p{color:#d5d5d5;font-size:13px;}
+
+/* ==================== STYLE MENU DONE (SESUAI GAMBAR) ==================== */
+.done-container {
+font-family: 'Inter', sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+color: #fff;
+}
+
+.success-icon {
+width: 70px;
+height: 70px;
+background: #05b374;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 25px;
+box-shadow: 0 0 20px rgba(5, 179, 116, 0.4);
+}
+
+.success-icon svg {
+width: 35px;
+height: 35px;
+fill: #fff;
+}
+
+.done-title {
+font-size: 32px;
+font-weight: 700;
+margin-bottom: 5px;
+letter-spacing: 1px;
+}
+
+.done-subtitle {
+font-size: 11px;
+color: #727e96;
+letter-spacing: 2px;
+margin-bottom: 35px;
+font-weight: 600;
+}
+
+.input-group {
+width: 100%;
+text-align: left;
+margin-bottom: 20px;
+}
+
+.input-label {
+font-size: 11px;
+color: #4c5975;
+font-weight: 700;
+letter-spacing: 1px;
+margin-bottom: 8px;
+text-transform: uppercase;
+}
+
+.input-wrapper {
+position: relative;
+width: 100%;
+display: flex;
+align-items: center;
+}
+
+.input-field {
+width: 100%;
+padding: 16px 50px 16px 16px;
+background: #0d1321;
+border: 1px solid #1a2336;
+border-radius: 14px;
+color: #8fa0c2;
+font-size: 13px;
+outline: none;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.copy-icon-btn {
+position: absolute;
+right: 15px;
+background: none;
+border: none;
+cursor: pointer;
+padding: 0;
+width: auto;
+display: flex;
+align-items: center;
+}
+
+.copy-icon-btn:hover {
+transform: none;
+box-shadow: none;
+}
+
+.copy-icon-btn svg {
+width: 18px;
+height: 18px;
+fill: #4c5975;
+transition: fill 0.2s;
+}
+
+.copy-icon-btn:hover svg {
+fill: #05b374;
+}
+
+.action-buttons {
+width: 100%;
+margin-top: 25px;
+}
+
+.btn-main-copy {
+width: 100%;
+padding: 16px;
+background: #fff;
+color: #000;
+font-family: 'Inter', sans-serif;
+font-weight: 700;
+font-size: 14px;
+border-radius: 14px;
+border: none;
+cursor: pointer;
+letter-spacing: 1px;
+margin-bottom: 15px;
+transition: background 0.2s;
+}
+
+.btn-main-copy:hover {
+background: #e2e8f0;
+transform: none;
+box-shadow: none;
+}
+
+.btn-footer-group {
+display: flex;
+gap: 15px;
+width: 100%;
+}
+
+.btn-secondary {
+flex: 1;
+padding: 14px;
+background: #131a2e;
+border: 1px solid #1e294b;
+color: #5c6f99;
+font-family: 'Inter', sans-serif;
+font-weight: 600;
+font-size: 12px;
+border-radius: 14px;
+cursor: pointer;
+text-align: center;
+letter-spacing: 0.5px;
+transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+background: #1c2642;
+color: #fff;
+transform: none;
+box-shadow: none;
+}
+
+@keyframes floatPanel{
+50%{transform:translateY(-8px);}
+}
+
+@media(max-width:480px){
+.panel{padding:25px;border-radius:28px;}
+.logo h1{font-size:32px;}
+button{font-size:15px;}
+}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="stars"></div>
+<div class="glow"></div>
+
+<div class="panel" id="menu-input">
+<div class="logo">
+<h1>PORTAL WEBP</h1>
+<p>PORTAL CREATE WEBP FIZZ-HOST</p>
+</div>
+
+<form id="form-webp" onsubmit="event.preventDefault(); generateWebP();">
+<label for="web-dropdown">PILIH NOMOR / WEBP DI BAWAH INI</label>
+
+<select id="web-dropdown" name="nomor" required>
+<option value="">-- PILIH  WEB P --</option>
+<option value="1">DOWNLOAD FF BETA</option>
+<option value="2">FF KIPAS BISA PUSH RANK</option>
+</select>
+
+<button type="submit" name="buatweb">BUAT WEBP</button>
+</form>
+
+<div class="info-cards">
+<div class="info-card" onclick="window.open('https://wa.me/6285771062214')">
+<h3>FIZZ-HOST</h3>
+<p>Pembuat Script</p>
+</div>
+
+<div class="info-card" onclick="window.open('https://chat.whatsapp.com/KMCxWgum97kF7Z1IcePiW6?s=cl&p=a&ilr=2&amv=3')">
+<h3>MARGA INDOBEST</h3>
+<p>Support & Distribusi</p>
+</div>
+</div>
+</div>
+
+<div class="panel hidden" id="menu-done">
+<div class="done-container">
+<div class="success-icon">
+<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+</div>
+
+<div class="done-title">Done!</div>
+<div class="done-subtitle">LINK SUCCESSFULLY CREATED</div>
+
+<div class="input-group">
+<div class="input-label">Main Web</div>
+<div class="input-wrapper">
+<input type="text" class="input-field" id="url-main" value="https://vmrkz.mqxav.my.id/?url=c063ef22" readonly>
+<button class="copy-icon-btn" onclick="copyText('url-main')">
+<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+</button>
+</div>
+</div>
+
+<div class="input-group">
+<div class="input-label">Setting Control</div>
+<div class="input-wrapper">
+<input type="text" class="input-field" id="url-setting" value="https://vmrkz.mqxav.my.id/setting.php?url=9a2ca644" readonly>
+<button class="copy-icon-btn" onclick="copyText('url-setting')">
+<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+</button>
+</div>
+</div>
+
+<div class="input-group">
+<div class="input-label">Wrapped Link</div>
+<div class="input-wrapper">
+<input type="text" class="input-field" id="url-wrapped" value="https://sung.click-mee.biz.id/xHV0BX" readonly>
+<button class="copy-icon-btn" onclick="copyText('url-wrapped')">
+<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+</button>
+</div>
+</div>
+
+<div class="action-buttons">
+<button class="btn-main-copy" onclick="copyText('url-wrapped')">COPY LINK</button>
+<div class="btn-footer-group">
+<button class="btn-secondary" onclick="alert('Membuka Pengaturan...')">SETTING</button>
+<button class="btn-secondary" onclick="resetMenu()">NEW LINK</button>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+// Fungsi untuk memindahkan menu dari Form ke menu Done!
+function generateWebP() {
+const dropdown = document.getElementById('web-dropdown');
+if(dropdown.value === "") {
+alert("Silakan pilih WebP terlebih dahulu!");
+return;
+}
+
+// Sembunyikan menu input, tampilkan menu hasil sukses
+document.getElementById('menu-input').classList.add('hidden');
+document.getElementById('menu-done').classList.remove('hidden');
+}
+
+// Fungsi tombol untuk menyalin teks link otomatis
+function copyText(elementId) {
+const copyText = document.getElementById(elementId);
+copyText.select();
+copyText.setSelectionRange(0, 99999); // Untuk perangkat mobile
+
+navigator.clipboard.writeText(copyText.value);
+alert("Link berhasil disalin: " + copyText.value);
+}
+
+// Fungsi kembali buat link baru (Tombol NEW LINK)
+function resetMenu() {
+document.getElementById('menu-done').classList.add('hidden');
+document.getElementById('menu-input').classList.remove('hidden');
+document.getElementById('web-dropdown').selectedIndex = 0;
+}
+</script>
+</body>
+</html>
